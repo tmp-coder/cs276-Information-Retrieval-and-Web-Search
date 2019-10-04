@@ -1,6 +1,6 @@
 # tfidf
 
-$tf_{t,d}$: term frequency, # term $t$ in doc $d$/ sum of # term in doc $d$ 
+$tf_{t,d}$: term frequency, # term $t$ in doc $d$
 
 **intuition** rare terms are more informative(e.g stop words, the,a, an, useless)
 
