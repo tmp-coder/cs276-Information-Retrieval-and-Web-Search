@@ -4,3 +4,5 @@ coursework & note for cs276 Information Retrieval and Web Search : https://web.s
 # note
 
 - [index](/note/index.md)
+- [Spelling correction](/note/spelling-corrector.md)
+- [tf-idf](/note/tfidf.md)
