@@ -7,7 +7,7 @@ class NDCG:
     def get_rel_scores(self, filename):
         self.rel_scores = {}
         query = ""
-        with open(filename, 'r') as f:
+        with open(filename, 'r',encoding="utf-8") as f:
             for line in f:
                 if line.startswith("q"):
                     query = line.split(":")[-1].strip()
@@ -44,7 +44,7 @@ class NDCG:
         cur_q = ""
         cur_rels = []
 
-        with open(ranked_result_file, 'r') as f:
+        with open(ranked_result_file, 'r',encoding="utf-8") as f:
             for line in f:
                 clean_l = line.strip().split(":")
                 l_type = clean_l[0].strip()
@@ -79,7 +79,7 @@ class NDCG:
         return sum_ndcg / len(self.query_ndcg)
 
     def write_ndcg_result(self, ndcg_result_file):
-        with open(ndcg_result_file, 'w') as f:
+        with open(ndcg_result_file, 'w',encoding="utf-8") as f:
             for query in self.query_ndcg:
                 f.write("query: " + query + "\n")
                 ndcg_score = self.query_ndcg[query]
