@@ -149,6 +149,10 @@ e.g
 
 这个算法对于assigment中的例子来说 57M-> 31M
 
+## 简单实现
+
+[code](https://github.com/zouzhitao/cs276-Information-Retrieval-and-Web-Search/tree/master/pa1/pa1-skeleton)
+
 # ref
 
 1. [Introduction to Information Retrieval, by C. Manning, P. Raghavan, and H. Schütze (Cambridge University Press, 2008).](https://nlp.stanford.edu/IR-book/)
