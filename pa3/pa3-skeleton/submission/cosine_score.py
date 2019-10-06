@@ -1,3 +1,4 @@
+
 from submission.ascore import * #modified
 class CosineSimilarityScorer(AScorer):
 
@@ -33,7 +34,7 @@ class CosineSimilarityScorer(AScorer):
         ### Begin your code
         score =0
         for term in set(q.query_words):
-            for parse_type in self.TFTYPES:
+            for parse_type in doc_vec:
                 score += self.weight[parse_type] * doc_vec[parse_type][term] * query_vec[term]
         ### End your code
         return score

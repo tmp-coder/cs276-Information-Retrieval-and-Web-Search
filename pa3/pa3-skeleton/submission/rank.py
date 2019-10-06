@@ -27,7 +27,7 @@ class Rank:
 #             doc_and_scores = {}
             # rank the urls based on scores
             ### Begin your code
-            query_rankings[query] = sorted(query_dict[query].values(),key=lambda x:scorer.get_sim_score(query,x))
+            query_rankings[query] = sorted(query_dict[query].values(),key=lambda x:-scorer.get_sim_score(query,x))
             ### End your code
         
         return query_rankings
@@ -44,12 +44,13 @@ class Rank:
         
         """
         # loop through urls for query, getting scores
+        from collections import OrderedDict
         query_rankings = {}
         for query in input_dict.keys():
             url_and_scores = {}
             # sort the urls based on scores
             ### Begin your code
-            
+            query_rankings[query] = OrderedDict(sorted([(k,v) for k,v in input_dict[query].items()], key=lambda x : -x[1]))
             ### End your code
         return query_rankings
     

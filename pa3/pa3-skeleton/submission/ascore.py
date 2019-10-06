@@ -136,7 +136,7 @@ class AScorer:
             
         query_vec = {}
         ### Begin your code
-        query_vec = dict(list(map(lambda x : (x,self.idf.get_idf(x)),set(q.query_words))))
+        query_vec = dict(list(map(lambda x : (x,self.idf.get_idf(x)),set(q.query_words)))) # idf
         ### End your code
         return query_vec
     

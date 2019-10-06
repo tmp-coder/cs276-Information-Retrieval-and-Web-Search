@@ -22,7 +22,7 @@ class Idf:
             print("Total Number of Docs is", self.total_doc_num)
 
             with open("pa3-data/terms.dict", 'rb') as f:
-                terms = pkl.load(f)
+                terms = pkl.load(f) # IdMap, int->term,term->termID
             self.total_term_num = len(terms)
             print("Total Number of Terms is", self.total_term_num)
 
